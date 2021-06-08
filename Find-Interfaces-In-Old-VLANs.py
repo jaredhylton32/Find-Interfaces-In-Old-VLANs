@@ -68,7 +68,6 @@ def getSwitchIps(switchTextFileName):
     return listOfSwitches
 
 def sshToSwitch(ipAddress):
-    #cisco_ios_show_interfaces_status.textfsm
     cisco['host'] = ipAddress
     net_connect = ConnectHandler(**cisco)
 
@@ -98,7 +97,6 @@ def printLists(listOfDownedInterfacesInOldVlan, listOfUpInterfacesInOldVlan, old
     print('ACCESS INTERFACES IN VLAN', oldVlanNumber, 'THAT ARE NOTCONNECT')
     for interface in listOfDownedInterfacesInOldVlan:
         print(interface)
-    #print(listOfDownedInterfacesInOldVlan)
     print('-' * 25)
     print('ACCESS INTERFACES IN VLAN', oldVlanNumber, 'THAT ARE CONNECTED')
     for interface in listOfUpInterfacesInOldVlan:
