@@ -18,15 +18,12 @@ from netmiko import ConnectHandler
 import getpass
 import sys
 from UsefulFunctions import validate_ip
-import textfsm
-
 from pprint import pprint
 
 username = getpass.getuser()
 userPassword = getpass.getpass()
 oldVlanNumber = input('Enter in a single old VLAN number: ')
 #oldVlanNumber = "1"
-
 
 outputFileName = 'c:/Users/' + username + '/Desktop/Find-Notconnected-Interfaces-In-Old-VLANs.txt'
 
